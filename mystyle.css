@@ -1,0 +1,287 @@
+html {
+  width: 100%;
+  height: 100%;
+  
+  background: #11e8bb; /* Old browsers */
+  background: -moz-linear-gradient(top,  var(--bright) 0%, var(--dark) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  var(--bright) 0%,var(--dark) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  var(--bright) 0%,var(--dark) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11e8bb', endColorstr='#8200c9',GradientType=0 ); /* IE6-9 */
+  overflow: hidden;
+}
+
+
+:root {
+  
+  --bright: #e6a19e;
+  --dark: #5a548a;
+  --overall-background: white;
+  --sidebar-col: rgb(227, 227, 227);
+  --icon-col: #a88095;
+  --icon-hov: #745465;
+  --tooltip-bg: rgb(163, 162, 162);
+  --navbar-col: rgb(227, 227, 227);
+  --navbar-icon: #a88095;
+  --navbar-hov: #745465;
+  
+}
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* NAVBAR */
+.topnav {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.topnav button {
+  float: left;
+  color: var(--navbar-icon);
+  text-align: center;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: var(--navbar-col);
+  border-radius: 25px;
+  margin-left: 10px;
+  border: var(--navbar-col);
+}
+
+.topnav button:hover {
+  color: var(--navbar-hov);
+}
+
+/* SIDEBAR */
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 60%;
+  width: 9%;
+  border-radius: 25px;
+  position: fixed;
+  z-index: 1;
+  top: 15%;
+  left: 0;
+  background-color: var(--sidebar-col);
+  overflow-x: hidden;
+  padding-top: 50px;
+  transition: 0.3s;
+}
+
+/* Style sidebar links */
+.sidebar a {
+  padding:15px 8px 6px 40px;
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--icon-col);
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: var(--icon-hov);
+}
+
+/* Position and style the close button */
+.sidebar .closebtn {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-size: 24px;
+  margin-left: 50px;
+}
+
+#split {
+  color: var(--tooltip-bg);
+  padding:0px 0px 20px 17px;
+}
+
+/* Open side panel button */
+.openbtn {
+  position: fixed;
+  top: 40%;
+  left: -9px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: var(--sidebar-col);
+  color: var(--icon-col);
+  border: none;
+}
+
+.openbtn:hover {
+  color: var(--icon-hov);
+}
+
+/* Icons for the sidebar */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 10000,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Tooltip styling */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--tooltip-bg);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 75%;
+  left: 70%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--tooltip-bg) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* SLIDER */
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+  margin-left:7%;
+}
+
+/* The slider itself */
+.slider {
+  float:right;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 20%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: var(--sidebar-col); /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  transform: rotate(270deg);
+  margin-top: 5%;
+  border-radius: 25px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--icon-hov); /* gray background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 20px;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: var(--icon-hov); /* gray background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 20px;
+}
+
+#demo {
+  visibility:hidden;
+}
+
+
+/* Content Container */
+
+.display-buttons {
+  overflow: hidden;
+  margin-top: 35%;
+  margin-left: 75%;
+  position:absolute;
+  
+}
+
+#opt1 {
+  color: #7f7b73;
+  text-align: center;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  background: var(--navbar-col);
+  border-radius: 25px;
+  margin-left: 10px;
+  border: var(--navbar-col);
+  cursor: pointer;
+
+}
+
+#opt2 {
+  color: #85b799;
+  text-align: center;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  background: var(--navbar-col);
+  border-radius: 25px;
+  margin-left: 10px;
+  border: var(--navbar-col);
+  cursor: pointer;
+
+}
+
+#opt3 {
+  color: #ccb597;
+  text-align: center;
+  padding: 14px 22px;
+  text-decoration: none;
+  font-size: 17px;
+  background: var(--navbar-col);
+  border-radius: 25px;
+  margin-left: 10px;
+  border: var(--navbar-col);
+  cursor: pointer;
+}
+
+/* Style the main content */
+.main {
+  margin: 0px;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: -1;
+}
