@@ -1,15 +1,44 @@
 {
-  "name": "whalesharks-tartanhacks-2025",
-  "version": "1.0.0",
-  "description": "<h1>HexWorld: A Procedural Hex World Island Generator</h1> HexWorld is an innovative web application developed for the 2025 TartanHacks Hackathon, designed to generate procedurally crafted hexagonal world maps. Whether you're a game developer, digital artist, or storyteller, HexWorld provides a seamless tool for creating immersive landscapes for map-based storytelling, game design, and animation content generation.",
-  "main": "main.js",
+  "name": "hello-world",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "three": "^0.173.0"
-  }
+    "core-js": "^3.8.3",
+    "three": "^0.172.0",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }
